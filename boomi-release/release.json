@@ -1,0 +1,12 @@
+{
+  "pipelines": [
+    {
+      "processName": "INT001 [DISK>BOOMI] (Sched) Update Extensions (XREF Dummy Table)",
+      "packageVersion": "2.0",
+      "componentId": "3419fdcb-3db0-4e16-9ae2-a3bf8b7c6f0f",
+      "notes": "Deployment for SCU",
+    //  "schedule": "0 0 1 * * * ; 30 0 2-7 * * *",
+      "automatedTestId": "77e8f44d-1c4c-4db4-8c41-449623a0201c"
+    }
+  ]
+}
