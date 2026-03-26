@@ -29,10 +29,10 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.13.5'
+          python-version: '3.13' 
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
@@ -56,7 +56,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.11 boomi_cicd/scripts/release_pipeline.py
+          python3.13 boomi_cicd/scripts/release_pipeline.py
 
   stage:
     name: Stage Deployment
@@ -81,10 +81,10 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.13.5'
+          python-version: '3.13' 
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
@@ -108,7 +108,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.11 boomi_cicd/scripts/release_pipeline.py
+          python3.13 boomi_cicd/scripts/release_pipeline.py
 
   production:
     name: Production Deployment
@@ -125,10 +125,11 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.13.5'
+          python-version: '3.13' 
+
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
@@ -152,4 +153,4 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.11 boomi_cicd/scripts/release_pipeline.py
+          python3.13 boomi_cicd/scripts/release_pipeline.py
