@@ -86,7 +86,7 @@ jobs:
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
         with:
-          path: boomi-cicd-release
+          path: boomi-release
 
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
@@ -126,7 +126,7 @@ jobs:
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
         with:
-          path: boomi-cicd-release
+          path: boomi-release
 
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
