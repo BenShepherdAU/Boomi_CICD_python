@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: <company-organization>/boomi-cicd-cli-py
-          token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
+          token: ${{ secrets.BOOMI_CICD_LIBRARY_PATH }}
           path: boomi-cicd-cli-py
 
       - name: Install dependencies
@@ -89,7 +89,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: <company-organization>/boomi-cicd-cli-py
-          token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
+          token: ${{ secrets.BOOMI_CICD_LIBRARY_PATH }}
           path: boomi-cicd-cli-py
 
       - name: Install dependencies
@@ -130,7 +130,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: <company-organization>/boomi-cicd-cli-py
-          token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
+          token: ${{ secrets.BOOMI_CICD_LIBRARY_PATH }}
           path: boomi-cicd-cli-py
 
       - name: Install dependencies
