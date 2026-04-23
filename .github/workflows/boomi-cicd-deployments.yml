@@ -33,10 +33,6 @@ jobs:
 
       - run: python3 --version
 
-      - name: Install pip
-        run: |
-          python -m pip install --upgrade pip  # Upgrades pip if it's already installed
-
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
         with:
@@ -89,10 +85,6 @@ jobs:
 
       - run: python3 --version
 
-      - name: Install pip
-        run: |
-          python -m pip install --upgrade pip  # Upgrades pip if it's already installed
-
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
         with:
@@ -134,10 +126,6 @@ jobs:
           ls -la ./
 
       - run: python3 --version
-
-      - name: Install pip
-        run: |
-          python -m pip install --upgrade pip  # Upgrades pip if it's already installed
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
