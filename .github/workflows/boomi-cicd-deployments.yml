@@ -36,12 +36,12 @@ jobs:
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
         with:
-          path: boomi-cicd-release
+          path: boomi-release
 
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
         with:
-          repository: BenShepherdAU/Boomi_CICD_python
+          repository: BenShepherdAU
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }} 
           path: Boomi_CICD_python
 
