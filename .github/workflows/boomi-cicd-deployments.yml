@@ -73,6 +73,8 @@ jobs:
       BOOMI_RELEASE_FILE: "boomi-cicd-release/boomi_release/release.json"
       BOOMI_ENVIRONMENT_NAME: "${{ vars.BOOMI_ENVIRONMENT_NAME }}"
 
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Opt-in to Node.js 24 now
+
     steps:
       - name: 'Cleanup directory'
         run: |
