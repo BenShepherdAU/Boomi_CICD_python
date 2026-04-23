@@ -18,7 +18,7 @@ jobs:
       BOOMI_ENVIRONMENT_NAME: "${{ vars.BOOMI_ENVIRONMENT_NAME }}"
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
       BOOMI_PASSWORD: ${{ secrets.BOOMI_PASSWORD }}
-      BOOMI_RELEASE_FILE: "boomi-cicd-release/boomi_release/release.json"
+      BOOMI_RELEASE_FILE: "boomi-release/release.json"
 
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Opt-in to Node.js 24 now
 
@@ -54,7 +54,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.13 boomi_cicd/scripts/release_pipeline.py
+          python3.13 scripts/release_pipeline.py
 
   stage:
     name: Stage Deployment
@@ -68,7 +68,7 @@ jobs:
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
       BOOMI_PASSWORD: ${{ secrets.BOOMI_PASSWORD }}
-      BOOMI_RELEASE_FILE: "boomi-cicd-release/boomi_release/release.json"
+      BOOMI_RELEASE_FILE: "boomi-release/release.json"
       BOOMI_ENVIRONMENT_NAME: "${{ vars.BOOMI_ENVIRONMENT_NAME }}"
 
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Opt-in to Node.js 24 now
@@ -104,7 +104,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.13 boomi_cicd/scripts/release_pipeline.py
+          python3.13 scripts/release_pipeline.py
 
   production:
     name: Production Deployment
@@ -144,4 +144,4 @@ jobs:
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
-          python3.13 boomi_cicd/scripts/release_pipeline.py
+          python3.13 scripts/release_pipeline.py
