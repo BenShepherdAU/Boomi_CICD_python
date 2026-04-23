@@ -41,9 +41,9 @@ jobs:
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
         with:
-          repository: BenShepherdAU
+          repository: BenShepherdAU/Boomi_CICD_python
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }} 
-          path: Boomi_CICD_python
+          path: 
 
       - name: Install dependencies
         run: |
