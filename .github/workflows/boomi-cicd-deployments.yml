@@ -113,6 +113,16 @@ jobs:
 
     environment: production
 
+    env:
+      BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
+      BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
+      BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
+      BOOMI_PASSWORD: ${{ secrets.BOOMI_PASSWORD }}
+      BOOMI_RELEASE_FILE: "boomi-release/release.json"
+      BOOMI_ENVIRONMENT_NAME: "${{ vars.BOOMI_ENVIRONMENT_NAME }}"
+
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Opt-in to Node.js 24 now
+
     steps:
       - name: 'Cleanup directory'
         run: |
