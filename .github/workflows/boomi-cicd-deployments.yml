@@ -29,10 +29,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.13.5' 
+      - run: python3 --version
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
@@ -81,10 +78,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.13.5' 
+      - run: python3 --version
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
@@ -125,11 +119,7 @@ jobs:
           rm -rf ./.??* || true
           ls -la ./
 
-      - name: Set up Python 3.13.5
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.13.5' 
-
+      - run: python3 --version
 
       - name: Checkout current Boomi release repo
         uses: actions/checkout@v4
