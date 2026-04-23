@@ -1,5 +1,4 @@
-#import boomi_cicd
-import Boomi_CICD_python
+import boomi_cicd
 
 # Open release json
 releases = boomi_cicd.set_release()
