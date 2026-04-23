@@ -48,6 +48,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          python -m pip install --upgrade pip  # Upgrade pip if necessary
           pip install -r ./requirements.txt
 
       - name: Deployment
@@ -97,6 +98,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          python -m pip install --upgrade pip  # Upgrade pip if necessary
           pip install -r ./requirements.txt
 
       - name: Deployment
@@ -138,6 +140,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          python -m pip install --upgrade pip  # Upgrade pip if necessary
           pip install -r ./requirements.txt
 
       - name: Deployment
