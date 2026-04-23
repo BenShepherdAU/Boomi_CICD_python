@@ -93,15 +93,15 @@ jobs:
         with:
           repository: BenShepherdAU/Boomi_CICD_python
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }} 
-          path: boomi-cicd-cli-py
+          path: 
 
       - name: Install dependencies
         run: |
-          cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          cd ${GITHUB_WORKSPACE}
 
       - name: Deployment
         run: | 
-          cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          cd ${GITHUB_WORKSPACE}
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
           python3.13 boomi_cicd/scripts/release_pipeline.py
@@ -133,15 +133,15 @@ jobs:
         with:
           repository: BenShepherdAU/Boomi_CICD_python
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }} 
-          path: boomi-cicd-cli-py
+          path: 
 
       - name: Install dependencies
         run: |
-          cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          cd ${GITHUB_WORKSPACE}
 
       - name: Deployment
         run: | 
-          cd ${GITHUB_WORKSPACE}/boomi-cicd-cli-py
+          cd ${GITHUB_WORKSPACE}
           export PYTHONPATH=$(pwd)
           export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
           python3.13 boomi_cicd/scripts/release_pipeline.py
