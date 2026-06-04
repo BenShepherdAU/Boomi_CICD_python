@@ -48,7 +48,14 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${GITHUB_WORKSPACE}
-
+          
+      - name: Regression Test
+        run: | 
+          cd ${GITHUB_WORKSPACE}
+          export PYTHONPATH=$(pwd)
+          export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
+          python3.13 boomi_cicd/scripts/automated_testing.py
+          
       - name: Deployment
         run: | 
           cd ${GITHUB_WORKSPACE}
