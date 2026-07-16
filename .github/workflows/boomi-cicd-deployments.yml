@@ -49,6 +49,13 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${GITHUB_WORKSPACE}
+
+      - name: Code Validation Test
+        run: | 
+          cd ${GITHUB_WORKSPACE}
+          export PYTHONPATH=$(pwd)
+          export BOOMI_RELEASE_FILE=${GITHUB_WORKSPACE}/${BOOMI_RELEASE_FILE}
+          python3.13 boomi_cicd/scripts/component_xml_sonarqube.py
           
       - name: Regression Test
         run: | 
